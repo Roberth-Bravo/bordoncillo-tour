@@ -3,172 +3,131 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ruta Ecoturística Páramo de Bordoncillo</title>
+<title>Ruta Ecoturística Páramo de Bordoncillo | Buesaco, Nariño</title>
+<meta name="description" content="Senderismo interpretativo al Páramo y Volcán Bordoncillo, Rosal del Monte, Buesaco, Nariño. Lagunas, frailejones y paisajes de alta montaña.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="./styles.css">
-
-<!-- Leaflet CSS -->
-<link rel="stylesheet"
-href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </head>
 
 <body>
 
+<!-- BARRA DE PESTAÑAS (siempre visible) -->
+<header class="topbar" id="topbar">
+  <a href="#inicio" class="brand">Páramo de Bordoncillo</a>
+  <nav class="tabs" aria-label="Secciones de la página">
+    <a href="#informacion">Información general</a>
+    <a href="#operativos">Aspectos operativos</a>
+    <a href="#alimentacion">Alimentación</a>
+    <a href="#costos">Costo del viaje</a>
+    <a href="#recomendaciones">Recomendaciones</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#creador">Creador</a>
+  </nav>
+</header>
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="inicio">
   <div class="hero-content">
+    <p class="hero-place">Rosal del Monte, Buesaco – Nariño, Colombia</p>
     <h1 class="hero-title">Páramo de Bordoncillo</h1>
-    <p class="hero-subtitle">
-      Rosal del Monte, Buesaco – Nariño, Colombia
-    </p>
-    <a href="https://wa.me/573137247884" target="_blank" class="btn-primary">
-      📞 Contactar y Agendar
-    </a>
+    <p class="hero-subtitle">Caminata guiada entre lagunas de origen volcánico, frailejones y vistas de alta montaña.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/573137247884" target="_blank" rel="noopener" class="btn-primary">Contactar y agendar</a>
+      <a href="#informacion" class="btn-ghost">Conocer el páramo</a>
+    </div>
   </div>
+
+  <ul class="facts">
+    <li><strong>3.200–3.600</strong><span>msnm</span></li>
+    <li><strong>4–12 °C</strong><span>temperatura promedio</span></li>
+    <li><strong>$40.000</strong><span>COP por persona</span></li>
+    <li><strong>+$10.000</strong><span>Cocha de Moras</span></li>
+  </ul>
 </section>
 
+<main>
+
 <!-- INFORMACIÓN GENERAL -->
-<section class="section">
+<section class="section" id="informacion">
   <div class="container">
-    <h2>Información General</h2>
-
+    <h2>Información general</h2>
     <div class="grid-2">
-      <div>
-        <p>
-        El Páramo o Volcán Bordoncillo se encuentra ubicado en el corregimiento Rosal del Monte, en el municipio de Buesaco, departamento de Nariño, al suroccidente de Colombia. Este territorio forma parte del sistema montañoso andino y constituye uno de los ecosistemas de alta montaña más representativos de la región. Su ubicación estratégica dentro de la cordillera de los Andes lo convierte en un espacio natural de gran importancia ecológica, paisajística e hídrica para las comunidades cercanas.
-        </p>
-
-        <p>
-        La zona del Bordoncillo se sitúa aproximadamente entre los 3.200 y los 3.600 metros sobre el nivel del mar (msnm), lo que corresponde al rango altitudinal típico de los ecosistemas de páramo andino. En estas elevaciones predominan condiciones climáticas particulares caracterizadas por bajas temperaturas, alta humedad, fuertes vientos y una elevada radiación solar durante el día, combinada con descensos térmicos significativos durante la noche. Las temperaturas promedio oscilan entre 4 °C y 12 °C, lo que genera un ambiente frío y húmedo que favorece el desarrollo de una biodiversidad especializada y altamente adaptada a estas condiciones extremas.
-        </p>
-
-        <p>
-        Desde el punto de vista geológico y geomorfológico, el Bordoncillo posee características asociadas a antiguos procesos volcánicos y a la dinámica natural de los ecosistemas de alta montaña. En su territorio se encuentran lagunas de origen natural, conocidas localmente como cochas, que se han formado a lo largo del tiempo por procesos de acumulación de agua, actividad volcánica pasada y dinámica glacial. Estas lagunas constituyen uno de los principales atractivos naturales del lugar y cumplen un papel fundamental en la conservación del agua dentro del ecosistema.
-        </p>
-
-        <p>
-        Otro aspecto relevante de este territorio es su valor paisajístico y ecoturístico. Desde diferentes puntos del recorrido es posible apreciar amplias panorámicas de montañas, lagunas, vegetación de páramo y formaciones naturales, lo que convierte al Bordoncillo en un lugar ideal para actividades de senderismo ecológico, observación de paisajes, educación ambiental y turismo de naturaleza. Estas actividades permiten a los visitantes comprender la importancia de los páramos en la conservación de los recursos naturales y en el equilibrio ambiental de las regiones andinas.
-        </p>
+      <div class="prose">
+        <p>El Páramo o Volcán Bordoncillo se encuentra ubicado en el corregimiento Rosal del Monte, en el municipio de Buesaco, departamento de Nariño, al suroccidente de Colombia. Este territorio forma parte del sistema montañoso andino y constituye uno de los ecosistemas de alta montaña más representativos de la región. Su ubicación estratégica dentro de la cordillera de los Andes lo convierte en un espacio natural de gran importancia ecológica, paisajística e hídrica para las comunidades cercanas.</p>
+        <p>La zona del Bordoncillo se sitúa aproximadamente entre los 3.200 y los 3.600 metros sobre el nivel del mar (msnm), lo que corresponde al rango altitudinal típico de los ecosistemas de páramo andino. En estas elevaciones predominan condiciones climáticas particulares caracterizadas por bajas temperaturas, alta humedad, fuertes vientos y una elevada radiación solar durante el día, combinada con descensos térmicos significativos durante la noche. Las temperaturas promedio oscilan entre 4 °C y 12 °C, lo que genera un ambiente frío y húmedo que favorece el desarrollo de una biodiversidad especializada y altamente adaptada a estas condiciones extremas.</p>
+        <p>Desde el punto de vista geológico y geomorfológico, el Bordoncillo posee características asociadas a antiguos procesos volcánicos y a la dinámica natural de los ecosistemas de alta montaña. En su territorio se encuentran lagunas de origen natural, conocidas localmente como cochas, que se han formado a lo largo del tiempo por procesos de acumulación de agua, actividad volcánica pasada y dinámica glacial. Estas lagunas constituyen uno de los principales atractivos naturales del lugar y cumplen un papel fundamental en la conservación del agua dentro del ecosistema.</p>
+        <p>Otro aspecto relevante de este territorio es su valor paisajístico y ecoturístico. Desde diferentes puntos del recorrido es posible apreciar amplias panorámicas de montañas, lagunas, vegetación de páramo y formaciones naturales, lo que convierte al Bordoncillo en un lugar ideal para actividades de senderismo ecológico, observación de paisajes, educación ambiental y turismo de naturaleza. Estas actividades permiten a los visitantes comprender la importancia de los páramos en la conservación de los recursos naturales y en el equilibrio ambiental de las regiones andinas.</p>
       </div>
-
-      <div class="image-real">
-  <img src="./img/bordoncillo2.jpg" alt="Páramo de Bordoncillo">
-</div>
+      <figure class="image-real">
+        <img src="./img/bordoncillo2.jpg" alt="Páramo de Bordoncillo" loading="lazy">
+      </figure>
     </div>
   </div>
 </section>
 
 <!-- ASPECTOS OPERATIVOS -->
-<section class="section alt">
-  <div class="container">
-    <h2>Aspectos Operativos y Logísticos</h2>
-
-    <p>
-    Antes de iniciar el recorrido hacia el Páramo o Volcán Bordoncillo, se establecerán dos puntos estratégicos de encuentro para organizar a los participantes, verificar condiciones básicas y brindar recomendaciones preventivas que permitan realizar la caminata de forma segura. El punto oficial de inicio será la vivienda de uno de los guías locales, donde se ofrecerá una breve explicación sobre las características del trayecto, la altitud, las condiciones climáticas del páramo, el tiempo estimado de la caminata y las normas ambientales que deben respetarse durante la actividad.
-    </p>
-
-    <p>
-    En términos logísticos, el lugar cuenta con espacio de estacionamiento para dos automóviles y cinco motocicletas. Los vehículos de mayor altura podrán continuar hasta la vivienda del segundo guía para facilitar el acceso y optimizar la organización del recorrido. Durante la caminata también se han definido puntos estratégicos de descanso y fotografía, seleccionados cuidadosamente para proteger el ecosistema del páramo y permitir que los visitantes disfruten del paisaje de manera segura y responsable.
-    </p>
-
-    <p>
-    Durante el recorrido se establecerán puntos de descanso y fotografía
-    previamente seleccionados para evitar afectaciones ambientales.
-    </p>
+<section class="section alt" id="operativos">
+  <div class="container narrow">
+    <h2>Aspectos operativos y logísticos</h2>
+    <div class="prose">
+      <p>Antes de iniciar el recorrido hacia el Páramo o Volcán Bordoncillo, se establecerán dos puntos estratégicos de encuentro para organizar a los participantes, verificar condiciones básicas y brindar recomendaciones preventivas que permitan realizar la caminata de forma segura. El punto oficial de inicio será la vivienda de uno de los guías locales, donde se ofrecerá una breve explicación sobre las características del trayecto, la altitud, las condiciones climáticas del páramo, el tiempo estimado de la caminata y las normas ambientales que deben respetarse durante la actividad.</p>
+      <p>En términos logísticos, el lugar cuenta con espacio de estacionamiento para dos automóviles y cinco motocicletas. Los vehículos de mayor altura podrán continuar hasta la vivienda del segundo guía para facilitar el acceso y optimizar la organización del recorrido. Durante la caminata también se han definido puntos estratégicos de descanso y fotografía, seleccionados cuidadosamente para proteger el ecosistema del páramo y permitir que los visitantes disfruten del paisaje de manera segura y responsable.</p>
+    </div>
   </div>
 </section>
 
-<!-- PLANES DE ALIMENTACIÓN -->
-<section class="section">
+<!-- ALIMENTACIÓN -->
+<section class="section" id="alimentacion">
   <div class="container">
-    <h2>Planes de Alimentación</h2>
-
+    <h2>Planes de alimentación</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Plan con Alimentación Comunitaria</h3>
-        <p>
-        Incluye una cuota adicional que cubre alimentación uniforme para
-        todos los participantes, promoviendo integración grupal y mejor logística.
-        </p>
-        <p>
-        Cada visitante puede llevar bebidas adicionales,
-        entregando residuos a los guías para manejo responsable.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Plan Autónomo</h3>
-        <p>
-        El participante lleva sus propios alimentos sin costo adicional.
-        </p>
-        <p>
-        Debe responsabilizarse completamente por sus residuos,
-        respetando el principio de no dejar rastro.
-        </p>
-      </div>
+      <article class="card">
+        <h3>Plan con alimentación comunitaria</h3>
+        <p>Incluye una cuota adicional que cubre alimentación uniforme para todos los participantes, promoviendo integración grupal y mejor logística.</p>
+        <p>Cada visitante puede llevar bebidas adicionales, entregando residuos a los guías para manejo responsable.</p>
+      </article>
+      <article class="card">
+        <h3>Plan autónomo</h3>
+        <p>El participante lleva sus propios alimentos sin costo adicional.</p>
+        <p>Debe responsabilizarse completamente por sus residuos, respetando el principio de no dejar rastro.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- COSTO DEL VIAJE -->
-<section class="section">
+<!-- COSTO -->
+<section class="section alt" id="costos">
   <div class="container">
-    <h2 class="section-title">Costo del Viaje</h2>
-
-    <div class="info-grid">
-
-      <div class="info-card">
-        <h3>Valor de la Experiencia</h3>
-        <p>
-        El recorrido guiado hacia el páramo y volcán del Bordoncillo tiene un 
-        costo de <strong>$40.000 COP por persona</strong>. Este valor incluye 
-        la experiencia completa de senderismo interpretativo por el ecosistema 
-        de páramo, acompañamiento durante el recorrido y la oportunidad de 
-        conocer uno de los paisajes naturales más representativos del municipio 
-        de Buesaco, Nariño.
-        </p>
-
-        <p>
-        Durante el trayecto los participantes podrán apreciar lagunas de origen 
-        volcánico, vegetación típica de alta montaña como los frailejones, 
-        además de disfrutar de vistas panorámicas únicas del entorno natural.
-        </p>
-      </div>
-
-      <div class="info-card">
-        <h3>Recorrido Opcional: Cocha de Moras</h3>
-        <p>
-        Para quienes deseen extender la experiencia, existe la posibilidad de 
-        continuar el recorrido hasta la última laguna del sistema conocida como 
-        <strong>"La Cocha de Moras"</strong>.
-        </p>
-
-        <p>
-        Este trayecto adicional tiene un costo de 
-        <strong>$10.000 COP por persona</strong>, debido a que implica una 
-        caminata más extensa y un mayor tiempo de recorrido dentro del páramo.
-        </p>
-
-        <p>
-        Este destino es especialmente recomendado para quienes desean vivir una 
-        experiencia más completa dentro del ecosistema, ya que permite explorar 
-        zonas menos transitadas y contemplar uno de los paisajes más hermosos y 
-        conservados del Bordoncillo.
-        </p>
-      </div>
-
+    <h2>Costo del viaje</h2>
+    <div class="cards">
+      <article class="card price">
+        <h3>Valor de la experiencia</h3>
+        <p class="amount">$40.000 <small>COP por persona</small></p>
+        <p>Incluye la experiencia completa de senderismo interpretativo por el ecosistema de páramo, acompañamiento durante el recorrido y la oportunidad de conocer uno de los paisajes naturales más representativos de Buesaco, Nariño.</p>
+        <p>Durante el trayecto podrá apreciar lagunas de origen volcánico, frailejones y vistas panorámicas únicas del entorno natural.</p>
+      </article>
+      <article class="card price">
+        <h3>Recorrido opcional: Cocha de Moras</h3>
+        <p class="amount">+$10.000 <small>COP por persona</small></p>
+        <p>Para quienes deseen extender la experiencia, es posible continuar hasta la última laguna del sistema, conocida como <strong>La Cocha de Moras</strong>. Implica una caminata más extensa y mayor tiempo dentro del páramo.</p>
+        <p>Es un destino recomendado para explorar zonas menos transitadas y contemplar uno de los paisajes más conservados del Bordoncillo.</p>
+      </article>
     </div>
+    <p class="cta-row"><a href="https://wa.me/573137247884" target="_blank" rel="noopener" class="btn-primary">Reservar por WhatsApp</a></p>
   </div>
 </section>
 
 <!-- RECOMENDACIONES -->
-<section class="section alt">
+<section class="section" id="recomendaciones">
   <div class="container">
     <h2>Recomendaciones</h2>
-
     <div class="grid-2">
-      <div>
-        <h3>Debe Llevar:</h3>
+      <div class="list-box yes">
+        <h3>Debe llevar</h3>
         <ul>
           <li>Agua suficiente.</li>
           <li>Ropa térmica e impermeable.</li>
@@ -178,9 +137,8 @@ href="https://unpkg.com/leaflet/dist/leaflet.css"/>
           <li>Snacks energéticos.</li>
         </ul>
       </div>
-
-      <div>
-        <h3>No Debe Llevar:</h3>
+      <div class="list-box no">
+        <h3>No debe llevar</h3>
         <ul>
           <li>Objetos innecesarios o pesados.</li>
           <li>Bebidas alcohólicas.</li>
@@ -193,21 +151,41 @@ href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </section>
 
 <!-- MAPA -->
-<section class="section">
+<section class="section alt" id="ubicacion">
   <div class="container">
-    <h2>Ubicación del Páramo</h2>
-    <div id="map"></div>
+    <h2>Ubicación del páramo</h2>
+    <p class="lead">Cambie entre vista de relieve y satélite con el control de capas del mapa (arriba a la derecha).</p>
+    <div id="map" role="region" aria-label="Mapa del Páramo de Bordoncillo"></div>
   </div>
 </section>
 
-<footer>
-Desarrollado Por Roberth Edmundo Bravo Guaquez © 2026 <br>
-📞 Contacto directo: 3137247884
+</main>
+
+<!-- CREADOR + PIE -->
+<footer id="creador">
+  <div class="container creator">
+    <div>
+      <p class="creator-label">Página desarrollada por</p>
+      <h3>Roberth Edmundo Bravo Guaquez</h3>
+      <p>Desarrollo web y proyectos de ecoturismo en Nariño.</p>
+    </div>
+    <div class="creator-links">
+      <!-- Cambie este enlace por la dirección de su página personal -->
+      <a href="https://TU-PAGINA-PERSONAL.com" target="_blank" rel="noopener" class="btn-light">Ver mi página personal</a>
+      <a href="https://wa.me/573137247884" target="_blank" rel="noopener">WhatsApp: 313 724 7884</a>
+    </div>
+  </div>
+  <p class="copy">© 2026 Ruta Ecoturística Páramo de Bordoncillo · Todos los derechos reservados</p>
 </footer>
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Botones flotantes -->
+<a href="https://wa.me/573137247884" target="_blank" rel="noopener" class="fab" aria-label="Escribir por WhatsApp">WhatsApp</a>
+<button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="./script.js"></script>
+</body>
+</html>
 
 </body>
 </html>
