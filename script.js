@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     maxZoom: 16, opacity: 0.45, attribution: "Relieve © Esri"
   });
 
-  var map = L.map("map", { center: coords, zoom: 30, layers: [relieve], scrollWheelZoom: false });
+  var map = L.map("map", { center: coords, zoom: 40, layers: [relieve], scrollWheelZoom: false });
   map.on("click", function () { map.scrollWheelZoom.enable(); });
   map.on("mouseout", function () { map.scrollWheelZoom.disable(); });
 
