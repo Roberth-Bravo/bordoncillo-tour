@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var reducir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- MAPA CON RELIEVE ---------- */
-  var coords = [1.3495, -77.1565];
+  var coords = [1.2183686812904715, -77.11162817214993];
 
   var relieve = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
     maxZoom: 17,
